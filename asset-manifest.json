@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mp3-react-app/static/css/main.1d592b07.css",
-    "main.js": "/mp3-react-app/static/js/main.70bfff81.js",
+    "main.js": "/mp3-react-app/static/js/main.a44c8b87.js",
     "static/js/453.25fffdc0.chunk.js": "/mp3-react-app/static/js/453.25fffdc0.chunk.js",
     "index.html": "/mp3-react-app/index.html",
     "main.1d592b07.css.map": "/mp3-react-app/static/css/main.1d592b07.css.map",
-    "main.70bfff81.js.map": "/mp3-react-app/static/js/main.70bfff81.js.map",
+    "main.a44c8b87.js.map": "/mp3-react-app/static/js/main.a44c8b87.js.map",
     "453.25fffdc0.chunk.js.map": "/mp3-react-app/static/js/453.25fffdc0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d592b07.css",
-    "static/js/main.70bfff81.js"
+    "static/js/main.a44c8b87.js"
   ]
 }
