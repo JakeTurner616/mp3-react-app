@@ -3,3 +3,5 @@ venv/
 downloads/
 music-library-manager/node_modules/
 music-library-manager/build/
+music-library-manager/.env
+
