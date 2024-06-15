@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
-import { REACT_APP_API_DOMAIN } from './config';
 
 function App() {
-  console.log(`Server: ${REACT_APP_API_DOMAIN}`);
+  const apiDomain = process.env.REACT_APP_API_DOMAIN;
+  console.log(`Server: ${apiDomain}`);
   const [youtubeLink, setYoutubeLink] = useState('');
   const [artist, setArtist] = useState('');
   const [album, setAlbum] = useState('');
@@ -21,7 +21,7 @@ function App() {
     setErrorMessage('');
 
     try {
-      const response = await fetch(`${REACT_APP_API_DOMAIN}/download`, {
+      const response = await fetch(`${apiDomain}/download`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -127,12 +127,12 @@ function App() {
                 <li key={index} className="flex justify-between items-center p-2 bg-gray-200 rounded">
                   <span>{song.title}</span>
                   <a
-                    href={`${REACT_APP_API_DOMAIN}/downloaded/${song.filename}`}
+                    href={`${apiDomain}/downloaded/${song.filename}`}
                     download
                     className="text-blue-500 hover:underline"
                     onClick={(e) => {
                       e.preventDefault();
-                      fetch(`${REACT_APP_API_DOMAIN}/downloaded/${song.filename}`)
+                      fetch(`${apiDomain}/downloaded/${song.filename}`)
                         .then((res) => {
                           if (!res.ok) {
                             throw new Error(res.status);
