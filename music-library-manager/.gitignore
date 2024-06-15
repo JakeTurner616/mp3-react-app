@@ -3,3 +3,4 @@ venv/
 downloads/
 node_modules/
 src/config.js
+build/
