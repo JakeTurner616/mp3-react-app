@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.1d592b07.css",
-    "main.js": "/static/js/main.c1bfb25d.js",
-    "static/js/453.25fffdc0.chunk.js": "/static/js/453.25fffdc0.chunk.js",
-    "index.html": "/index.html",
-    "main.1d592b07.css.map": "/static/css/main.1d592b07.css.map",
-    "main.c1bfb25d.js.map": "/static/js/main.c1bfb25d.js.map",
-    "453.25fffdc0.chunk.js.map": "/static/js/453.25fffdc0.chunk.js.map"
+    "main.css": "/mp3-react-app/static/css/main.1d592b07.css",
+    "main.js": "/mp3-react-app/static/js/main.38c6bbea.js",
+    "static/js/453.25fffdc0.chunk.js": "/mp3-react-app/static/js/453.25fffdc0.chunk.js",
+    "index.html": "/mp3-react-app/index.html",
+    "main.1d592b07.css.map": "/mp3-react-app/static/css/main.1d592b07.css.map",
+    "main.38c6bbea.js.map": "/mp3-react-app/static/js/main.38c6bbea.js.map",
+    "453.25fffdc0.chunk.js.map": "/mp3-react-app/static/js/453.25fffdc0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d592b07.css",
-    "static/js/main.c1bfb25d.js"
+    "static/js/main.38c6bbea.js"
   ]
 }
