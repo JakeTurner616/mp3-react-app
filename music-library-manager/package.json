@@ -19,6 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://serverboi.org/mp3-react-app/",
+  "basename": "/mp3-react-app",
   "eslintConfig": {
     "extends": [
       "react-app",
