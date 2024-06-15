@@ -1,0 +1,8 @@
+flask
+yt_dlp
+ffmpeg-python
+flask_cors
+mutagen
+Pillow
+bs4
+requests
