@@ -120,6 +120,12 @@ def download():
             final_thumbnail_path = os.path.join(album_dir, os.path.basename(jpg_thumbnail_path))
             shutil.move(jpg_thumbnail_path, final_thumbnail_path)
 
+        # Move .webp thumbnail to album directory
+        webp_thumbnail_path = os.path.join(TEMP_FOLDER, 'download.webp')
+        if os.path.exists(webp_thumbnail_path):
+            final_webp_thumbnail_path = os.path.join(album_dir, f"{track}.webp" if track else f"{title}.webp")
+            shutil.move(webp_thumbnail_path, final_webp_thumbnail_path)
+
         if genius_link:
             lyrics = fetch_lyrics(genius_link)
             if lyrics:
