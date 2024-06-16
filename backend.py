@@ -47,12 +47,18 @@ def fetch_lyrics(url):
         logger.error(f"Error fetching lyrics: {e}")
     return None
 
-def move_and_tag_file(filepath, artist, album, track, title):
+def move_and_tag_file(filepath, artist, album, track, title, track_number, genre, year):
     try:
         audio = EasyID3(filepath)
         audio['title'] = track or title
         audio['artist'] = artist or 'Unknown Artist'
         audio['album'] = album or 'Unknown Album'
+        if track_number:
+            audio['tracknumber'] = track_number
+        if genre:
+            audio['genre'] = genre
+        if year:
+            audio['date'] = year
         audio.save()
 
         artist_dir = os.path.join(TEMP_FOLDER, artist or 'Unknown Artist')
@@ -76,6 +82,9 @@ def download():
     album = request.json.get('album')
     track = request.json.get('track')
     genius_link = request.json.get('geniusLink')
+    track_number = request.json.get('trackNumber')
+    genre = request.json.get('genre')
+    year = request.json.get('year')
 
     if not link:
         return jsonify({'error': 'No link provided'}), 400
@@ -104,7 +113,7 @@ def download():
             os.rename(filepath, new_filepath)
             filepath = new_filepath
 
-        final_mp3_path = move_and_tag_file(filepath, artist, album, track, title)
+        final_mp3_path = move_and_tag_file(filepath, artist, album, track, title, track_number, genre, year)
 
         thumbnail_path = final_mp3_path.rsplit('.', 1)[0] + '.webp'
         jpg_thumbnail_path = None
