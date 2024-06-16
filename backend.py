@@ -60,7 +60,7 @@ def move_and_tag_file(filepath, artist, album, track, title):
         if not os.path.exists(album_dir):
             os.makedirs(album_dir)
 
-        final_mp3_path = os.path.join(album_dir, os.path.basename(filepath))
+        final_mp3_path = os.path.join(album_dir, f"{track}.mp3" if track else f"{title}.mp3")
         shutil.move(filepath, final_mp3_path)
         return final_mp3_path
     except Exception as e:
@@ -87,7 +87,7 @@ def download():
             'preferredcodec': 'mp3',
             'preferredquality': '192',
         }],
-        'outtmpl': os.path.join(TEMP_FOLDER, '%(title)s.%(ext)s'),
+        'outtmpl': os.path.join(TEMP_FOLDER, 'download.%(ext)s'),
         'writethumbnail': True,
     }
 
@@ -97,6 +97,12 @@ def download():
             title = info_dict.get('title', None)
             filename = os.path.basename(ydl.prepare_filename(info_dict).replace('.webm', '.mp3').replace('.m4a', '.mp3'))
             filepath = os.path.join(TEMP_FOLDER, filename)
+
+        # Rename file to user-provided song name
+        if track:
+            new_filepath = os.path.join(TEMP_FOLDER, f"{track}.mp3")
+            os.rename(filepath, new_filepath)
+            filepath = new_filepath
 
         final_mp3_path = move_and_tag_file(filepath, artist, album, track, title)
 
@@ -117,7 +123,7 @@ def download():
         if genius_link:
             lyrics = fetch_lyrics(genius_link)
             if lyrics:
-                lyrics_filename = f"{track or title}.txt"
+                lyrics_filename = f"{track}.txt" if track else f"{title}.txt"
                 lyrics_filepath = os.path.join(album_dir, lyrics_filename)
                 with open(lyrics_filepath, 'w', encoding='utf-8') as f:
                     f.write(lyrics)
@@ -144,6 +150,6 @@ def get_file(filename):
         return jsonify({'error': 'File not found'}), 404
     return send_file(filepath, as_attachment=True)
 
-#run with port 50616
+# Run with port 50616
 if __name__ == '__main__':
     app.run(debug=True, port=50616)
