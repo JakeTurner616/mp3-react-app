@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "mp3 to plex",
+  "name": "mp3 downloader to plex file format",
   "icons": [
     {
       "src": "favicon.ico",
