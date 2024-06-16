@@ -1,7 +1,8 @@
-# mp3-react-app
-
 ## Overview
-`mp3-react-app` is a simple React application that allows users to download MP3 files from YouTube links. The application also supports tagging the downloaded MP3 files with metadata (artist, album, track name) and organizing the files into a Plex-friendly structure. Additionally, it can acquire and download lyrics from a provided Genius URL.
+
+Click [here](https://serverboi.org/mp3-react-app/) to try the live demo.
+
+[mp3-react-app](https://github.com/JakeTurner616/mp3-react-app) is a simple React application that allows users to download MP3 files from YouTube links. The application also supports tagging the downloaded MP3 files with metadata (artist, album, track name) and organizing the files into a Plex-friendly structure. Additionally, it can acquire and download lyrics from a provided Genius URL.
 
 ![mp3-react-app](https://raw.githubusercontent.com/JakeTurner616/mp3-react-app/f6847f4b3f3067fb48cc2c64e05dd1c12ac4d440/docs/mlm.PNG)
 
@@ -26,15 +27,15 @@ Enter the YouTube link: Paste the URL of the YouTube video you want to download.
 Download: Click the "Download" button to start the process.
 
 Output Structure:
-The downloaded MP3 files will be organized in the following Plex-friendly structure:
+The downloaded MP3 files will be organized in the following [Plex-friendly](https://support.plex.tv/articles/200265296-adding-music-media-from-folders/) structure:
 
-```markdown
-/Music
-  /Artist Name
-    /Album Name
-      Track Name.mp3
+```artist_album_track.zip
+/Artist Name
+  /Album Name
+    Track Name.mp3 
+    Track Name.txt <----- Optional lyrics scraped from Genius
+    Track Name.webp <----- YouTube thumbnail for album cover
 ```
-
 
 # Development
 
@@ -73,9 +74,18 @@ The downloaded MP3 files will be organized in the following Plex-friendly struct
 
 4. **Install Backend for testing**
    ```sh
-   python -m venv venv
-   ./venv/Scripts/activate # change depending on OS
-   pip install -r requirements.txt
+    # Create a virtual environment
+    python -m venv venv
+    
+    # Activate the virtual environment
+   
+      # On Windows:
+      venv\Scripts\activate
+      # On macOS/Linux:
+      source venv/bin/activate
+    
+    # Install dependencies from requirements.txt
+    pip install -r requirements.txt
    ```
 
 5. **Run the Backend dev server for testing (don't forward or proxy this!)**
