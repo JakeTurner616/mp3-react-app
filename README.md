@@ -30,11 +30,11 @@ Output Structure:
 The downloaded MP3 files will be organized in the following [Plex-friendly](https://support.plex.tv/articles/200265296-adding-music-media-from-folders/) structure:
 
 ```artist_album_track.zip
-/Artist Name
-  /Album Name
-    Track Name.mp3 
-    Track Name.txt <----- Optional lyrics scraped from Genius
-    Track Name.webp <----- YouTube thumbnail for album cover
+Artist Name
+└── Album Name
+    ├── Track Name.mp3
+    ├── Track Name.txt (optional)
+    └── Track Name.webp (YouTube thumbnail for album cover)
 ```
 
 # Development
