@@ -4,6 +4,7 @@ import { ReactComponent as LinkIcon } from './link-alt-svgrepo-com.svg';
 import { ReactComponent as UserIcon } from './user-alt-1-svgrepo-com.svg';
 import { ReactComponent as AlbumIcon } from './music-file-svgrepo-com.svg';
 import { ReactComponent as TrackIcon } from './music-file-svgrepo-com.svg';
+import DirectoryStructure from './DirectoryStructure';
 
 function App() {
   const apiDomain = process.env.REACT_APP_API_DOMAIN;
@@ -21,6 +22,8 @@ function App() {
   const [processing, setProcessing] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [showMoreOptions, setShowMoreOptions] = useState(false);
+
+  const currentYear = new Date().getFullYear();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -81,9 +84,14 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-between p-4">
+      <header className="w-full max-w-md text-center mb-8">
+        <h1 className="text-4xl font-bold text-gray-800">Music Library Manager</h1>
+        <p className="text-gray-600 mt-2">Easily manage your music library by downloading and organizing your favorite tracks in plex file format.</p>
+      </header>
+      <DirectoryStructure />
+      
       <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-4">Music Library Manager</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex items-center space-x-2">
             <LinkIcon className="h-6 w-6 text-gray-500" />
@@ -247,6 +255,20 @@ function App() {
           </div>
         )}
       </div>
+      
+      <footer className="w-full py-4 flex flex-wrap justify-center items-center">
+        <div className="flex items-center">
+          <p>© {currentYear} <a href="https://serverboi.org">serverboi.org</a></p>
+        </div>
+        <span className="mx-4">·</span>
+        <div className="flex items-center">
+          <a href="mailto:jake@serverboi.org">jake@serverboi.org</a>
+          <span className="mx-4">·</span>
+          <a href="https://github.com/JakeTurner616/mp3-react-app">Source code</a>
+        </div>
+      </footer>
+
+      
     </div>
   );
 }
