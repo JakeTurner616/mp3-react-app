@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/mp3-react-app/static/css/main.7578a826.css",
-    "main.js": "/mp3-react-app/static/js/main.d61cb0ba.js",
+    "main.css": "/mp3-react-app/static/css/main.2835812e.css",
+    "main.js": "/mp3-react-app/static/js/main.4fe4ed69.js",
     "static/js/453.25fffdc0.chunk.js": "/mp3-react-app/static/js/453.25fffdc0.chunk.js",
     "index.html": "/mp3-react-app/index.html",
     "static/media/music-file-svgrepo-com.svg": "/mp3-react-app/static/media/music-file-svgrepo-com.dacb84ed70371f98c01bbd01559702c6.svg",
     "static/media/user-alt-1-svgrepo-com.svg": "/mp3-react-app/static/media/user-alt-1-svgrepo-com.077781174fa9863df51f828d8de8fdb8.svg",
     "static/media/link-alt-svgrepo-com.svg": "/mp3-react-app/static/media/link-alt-svgrepo-com.cd70f244cece3d70825f62c90b9bdfec.svg",
-    "main.7578a826.css.map": "/mp3-react-app/static/css/main.7578a826.css.map",
-    "main.d61cb0ba.js.map": "/mp3-react-app/static/js/main.d61cb0ba.js.map",
+    "main.2835812e.css.map": "/mp3-react-app/static/css/main.2835812e.css.map",
+    "main.4fe4ed69.js.map": "/mp3-react-app/static/js/main.4fe4ed69.js.map",
     "453.25fffdc0.chunk.js.map": "/mp3-react-app/static/js/453.25fffdc0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7578a826.css",
-    "static/js/main.d61cb0ba.js"
+    "static/css/main.2835812e.css",
+    "static/js/main.4fe4ed69.js"
   ]
 }
