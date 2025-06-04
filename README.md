@@ -1,8 +1,5 @@
 ## Overview
-
-Click [here](https://serverboi.org/mp3-react-app/) to try the live demo.
-
-[mp3-react-app](https://github.com/JakeTurner616/mp3-react-app) is a simple React application that allows users to download MP3 files from YouTube links. The application also supports tagging the downloaded MP3 files with metadata (artist, album, track name) and organizing the files into a Plex-friendly structure. Additionally, it can acquire and download lyrics from a provided Genius URL.
+[mp3-react-app](https://github.com/JakeTurner616/mp3-react-app) is a simple full-stack application that allows downloading of MP3 files from YouTube links in plex AMP file system format. The application specifically supports tagging the downloaded MP3 files with metadata (artist, album, track name). Additionally, it can acquire and download lyrics from a provided Genius URL.
 
 ![mp3-react-app](https://raw.githubusercontent.com/JakeTurner616/mp3-react-app/f6847f4b3f3067fb48cc2c64e05dd1c12ac4d440/docs/mlm.PNG)
 
